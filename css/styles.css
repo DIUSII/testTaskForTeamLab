@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.welcome-window {
+    height: inherit;
+}
+
+.welcome-window__container {
+    max-width: 1920px;
+    height: inherit;
+
+    display: flex;
+    position: relative;
+
+    margin: 0 auto;
+}
+
+.welcome-window__main {
+    height: inherit;
+    width: 70%;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.welcome-window__logo {
+    display: block;
+}
+
+.welcome-window__info-container {
+    height: calc(100% - 35px);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 5px 0 5px 180px;
+}
+
+.welcome-window__title {
+    font-family: Bodoni, serif;
+    font-size: 72px;
+    font-weight: bold;
+    color: #121212;
+
+    max-width: 816px;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.welcome-window__title_relative {
+    position: relative;
+}
+
+.welcome-window__title_animation-slide {
+    height: 100px;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+
+    position: absolute;
+    top: 0;
+}
+
+.welcome-window__title_animation-slide_width_600 {
+    animation-name: slideInAndOutWith600Width;
+}
+
+.welcome-window__title_animation-slide_width_650 {
+    animation-name: slideInAndOutWith650Width;
+}
+
+.welcome-window__title_animation-text {
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: textInAndOut;
+}
+
+.welcome-window__subtitle-container {
+    display: flex;
+}
+
+.welcome-window__line-container {
+    background-color: #fff;
+    min-width: 50px;
+
+    margin-top: 9px;
+    margin-right: 25px;
+}
+
+.welcome-window__line {
+    background-color: #f37a20;
+    width: 100%;
+    height: 2px;
+
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: lineInAndOut;
+}
+
+.welcome-window__subtitle-container {
+    width: 520px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.welcome-window__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #898989;
+
+    height: 70px;
+
+    margin: 0;
+    overflow: hidden;
+    text-overflow: clip;
+
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: textSlideInAndOut;
+}
+
+.welcome-window__button-container {
+    min-height: 42px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.welcome-window__button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    font-size: 16px;
+    color: #fff;
+
+    max-width: 200px;
+
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+
+    padding: 12px 24px;
+    margin-left: 75px;
+}
+
+.welcome-window__button_animation {
+    animation-name: showAndHide;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+}
+
+.welcome-window__chainsaw-container {
+    background-color: #d18153;
+    height: inherit;
+    width: 30%;
+
+    position: relative;
+}
+
+.welcome-window__chainsaw-text {
+    font-family: Bodoni, sans-serif;
+    font-size: 132px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 67%;
+    text-transform: uppercase;
+
+    position: absolute;
+    bottom: 0;
+    top: 0;
+
+    text-align: center;
+    writing-mode: vertical-rl;
+
+    animation-name: slideTextInAndOut;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+}
+
+.welcome-window__slider-container {
+    height: 100px;
+    width: 300px;
+    background-color: #fff;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.welcome-window__loaded-container {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-window__load-container {
+    width: 142px;
+    height: 8px;
+}
+
+.welcome-window__load {
+    height: 8px;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+}
+
+.welcome-window__load-one {
+    animation-name: loadOne;
+}
+
+.welcome-window__load-two {
+    animation-name: loadTwo;
+}
+
+.welcome-window__checkpoint {
+    width: 8px;
+    height: 8px;
+    background-color: #f37a1f;
+}
+
+.welcome-window__arrows-container {
+    height: calc(100% - 8px);
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 35px;
+}
+
+.welcome-window__arrow_right {
+    transition: opacity 0.5s, margin 0.5s;
+}
+
+.welcome-window__arrow_right:hover {
+    opacity: 0.7;
+    margin-left: 10px;
+}
+
+.welcome-window__arrow_left {
+    transform: scale(-1, 1);
+    transition: opacity 0.5s, margin 0.5s;
+
+    margin-right: 30px;
+}
+
+.welcome-window__arrow_left:hover {
+    opacity: 0.7;
+    margin-left: -10px;
+    margin-right: 40px;
+}
+
+.welcome-window__chainsaw-with-side {
+    width: 50%;
+    height: auto;
+
+    position: absolute;
+    right: 0;
+    top: 20%;
+
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-name: imgInAndOutOne;
+}
+
+.welcome-window__chainsaw-with-top {
+    height: 80%;
+
+    position: absolute;
+    top: 10%;
+    right: 21.5%;
+
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-name: imgInAndOutTwo;
+}
+
